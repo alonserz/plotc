@@ -91,10 +91,9 @@ void show_line_plot(double *x, int size_x, double *y, int size_y, int term_width
     }
 
     int scaled_x_size = sizeof(scaled_x) / sizeof(scaled_x[0]);
-    int scaled_y_size = sizeof(scaled_y) / sizeof(scaled_y[0]);
+    // int scaled_y_size = sizeof(scaled_y) / sizeof(scaled_y[0]);
     char row_buffer[term_width + 1];
     
-    int offset = 0;
 
     for(int i = term_height; i > -1; i--){
 	for(int j = 0; j < term_width + 1; j++){
@@ -128,7 +127,7 @@ void show_line_plot(double *x, int size_x, double *y, int size_y, int term_width
     }
 }
 int main(){
-    double x[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    double x[] = {-2 * M_PI, (-3 * M_PI) / 2, -1 * M_PI, (-1 * M_PI) / 2, 0, M_PI / 2, M_PI, (3 * M_PI) / 2, 2 * M_PI};
     int x_size = sizeof(x) / sizeof(x[0]);
     double y[x_size];
     for(int i = 0; i < x_size; i++){
