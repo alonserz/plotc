@@ -5,6 +5,7 @@ Plot in terminal
 ## Build
 ```
 cc -o nob ./nob.c
+./nob
 ```
 # Usage
 ```
